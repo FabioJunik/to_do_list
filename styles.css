@@ -1,0 +1,12 @@
+/* cores
+    Azul - #25B6D2
+    Amarelo - #FBDF2B
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 'poppins';
+}

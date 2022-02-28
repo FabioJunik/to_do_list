@@ -8,6 +8,116 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="cover"></div>
+        <div class="logo">
+            <img src="images/checklist.png" alt="">
+            Lista de Tarefas
+        </div>
+
+        <div class="item">
+            <img src="images/bullet-list.png" alt="">
+            <span>Item</span>
+            <div class="options">
+                <span class="add">Add</span>
+                <span class="view">View</span>
+            </div>
+        </div>
+        <div class="category">
+            <img src="images/category.png" alt="">
+            <span>Categoria</span>
+            <div class="options">
+                <span class="add">Add</span>
+                <span class="view">View</span>
+            </div>
+        </div>
+        
+        <div class="modal addItem">
+            <img src="images/cancel.png" alt="" class="close">
+            <h1>Adicionando novos itens</h1>
+            <input type="text" placeholder="Coisa para fazer">
+
+            <div class="ICategory">
+                <h2>Adicione em uma categoria</h2>
+                <p>Estudar <input type="checkbox" value="estudar"> </p>
+                <p>Deveres de casa <input type="checkbox" value="deveres"> </p>
+                <p>Estudar <input type="checkbox" value="estudar"> </p>
+                <p>Deveres de casa <input type="checkbox" value="deveres"> </p>
+            </div>
+
+            <button>Adicionar Item</button>
+        </div>
+
+        <div class="modal viewItem">
+            <img src="images/cancel.png" alt="" class="close">
+            <h1>Itens da lista de tarefa</h1>
+
+            <div class="ICategory">
+                <!-- <h2>Adicione em uma categoria</h2> -->
+                <p>Estudar <span> <input type="checkbox" value="estudar"> <img src="images/delete.png"></span></p>
+                <p>Deveres de casa <span> <input type="checkbox" value="estudar"> <img src="images/delete.png"></span> </p>
+                <p>Estudar<span> <input type="checkbox" value="estudar"> <img src="images/delete.png"></span> </p>
+                <p>Deveres de casa<span> <input type="checkbox" value="estudar"> <img src="images/delete.png"></span></p>
+            </div>
+
+        <button>Salvar alterações</button>
+        </div>
+
+        <div class="modal addCategory">
+            <img src="images/cancel.png" alt="" class="close">
+            <h1>Adicionando uma nova categoria</h1>
+            <input type="text" placeholder="Difine a categoria">
+
+            <div class="CItem">
+                <h2>Adicione itens na categoria</h2>
+                <p>Estudar base de dados <input type="checkbox" value="estudar"> </p>
+                <p>Varrer <input type="checkbox" value="deveres"> </p>
+                <p>Ler<input type="checkbox" value="estudar"> </p>
+                <p>Jogar  <input type="checkbox" value="deveres"> </p>
+                <p>Falar <input type="checkbox" value="estudar"> </p>
+                <p>Qualquer coisa para teste<input type="checkbox" value="deveres"> </p>
+                <p>Outra coisa <input type="checkbox" value="estudar"> </p>
+                <p>Deveres de casa <input type="checkbox" value="deveres"> </p>
+                <p>Estudar <input type="checkbox" value="estudar"> </p>
+                <p>Deveres de casa <input type="checkbox" value="deveres"> </p>
+                <p>Estudar <input type="checkbox" value="estudar"> </p>
+                <p>Deveres de casa <input type="checkbox" value="deveres"> </p>
+                <p>Estudar <input type="checkbox" value="estudar"> </p>
+                <p>Deveres de casa <input type="checkbox" value="deveres"> </p>
+                <p>Estudar <input type="checkbox" value="estudar"> </p>
+                <p>Deveres de casa <input type="checkbox" value="deveres"> </p>
+            </div>
+
+            <button>Adicionar Item</button>
+        </div>
+        
+        <div class="modal viewCategory">
+            <img src="images/cancel.png" alt="" class="close">
+            <h1>Categoria da lista de tarefa </h1>
+
+            <div class="estudar CItem">
+                
+                <div class="estudar">
+                    <h2>Estudar</h2>
+                    <p>Estudar <span> <input type="checkbox" value="estudar"><img src="images/delete.png"></span></p>
+                    <p>Deveres de casa<span><input type="checkbox" value="estudar"><img src="images/delete.png"></span></p>
+                    <p>Estudar<span> <input type="checkbox" value="estudar"><img src="images/delete.png"></span> </p>
+                    <p>Deveres de casa<span><input type="checkbox" value="estudar"><img src="images/delete.png"></span></p>
+                </div>
+                <div class="igreja">
+                    <h2>Coisas da igreja</h2>
+                    <p>Estudar <span> <input type="checkbox" value="estudar"> <img src="images/delete.png"></span></p>
+                    <p>Deveres de casa <span> <input type="checkbox" value="estudar"> <img src="images/delete.png"></span> </p>
+                    <p>Estudar<span> <input type="checkbox" value="estudar"> <img src="images/delete.png"></span> </p>
+                    <p>Deveres de casa<span> <input type="checkbox" value="estudar"> <img src="images/delete.png"></span></p>
+                </div>
+            </div>
+
+        <button>Salvar alterações</button>
+        </div>
+        
+    </div>
+
+    <script src="main.js"></script>
 </body>
 </html>

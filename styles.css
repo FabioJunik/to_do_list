@@ -49,7 +49,7 @@
     background-color: #fff;
     transition: 1s;
 }
-.viewItem{
+.viewCategory{
     top: 50px;
 }
 .modal .close{
@@ -70,7 +70,7 @@
     padding:5px 20px;
     border-radius: 20px;
     border: 1px solid #ddd;
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 16px;
 }
 
@@ -101,20 +101,28 @@ input[type=checkbox] {
     height: 350px;
 }
 
-.viewCategory .CItem, 
-.viewItem .ICategory {
-    height: 400px;
-    /* background-color: red; */
-}
 .ICategory h2, .CItem h2{
     position: sticky;
     top: 0;
     background-color: #fff;
+}
+
+.modal h2{
     font-weight: 100;
     font-size: 20px;
     margin-bottom: 20px;
 }
-.ICategory p, .CItem p{
+.allItens , .allCategory  {
+    height: 450px;
+    /* background-color: red; */
+    overflow: auto;
+
+}
+
+.modal  h1{
+    margin-bottom: 20px;
+}
+.modal > div p{
     /* width: 80%; */
     display: flex;
     justify-content: space-between;
@@ -141,9 +149,9 @@ input[type=checkbox] {
     /* background-color: red; */
 }
 
-.ICategory p img,
-.CItem p img{
+.modal div > p img{
     width: 18px;
+    margin-top: 10px;
     margin-left: 5px;
     cursor: pointer;
 }

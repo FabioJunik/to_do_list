@@ -32,13 +32,16 @@ optionAddCategory.addEventListener('click',()=>{
 });
 optionViewCategory.addEventListener('click',()=>{
     showModal('.viewCategory')
-    viewCategory();
-
 });
 
 document.querySelector('.addCategory button').addEventListener('click',addCategory);
 document.querySelector('.addItem button').addEventListener('click',addItem);
 
+document.querySelectorAll('.allItens img').forEach(imgDelete => 
+    imgDelete.addEventListener('click',()=>{
+        deleteItem(imgDelete);
+    })
+);
 Allmodals.forEach(modal =>{
     modal.querySelector('.close').addEventListener('click',()=>hiddeModal(modal));
 });
@@ -174,6 +177,39 @@ function categoryViewItem(){
 
 }
 
+function deleteItem(imgDelete){
+    const itemContainer =imgDelete.parentElement.parentElement;
+    const itemForDelete = itemContainer.textContent;
+
+    itemContainer.style.display = 'none'
+    
+    const category = getCategory();
+    
+    for(let categ in category)
+    {
+       const itemIndex = category[categ].findIndex(item=>item == itemForDelete.trim());
+
+       if(itemIndex>-1)
+       {
+            category[categ] = deleteOfArray(category[categ],itemIndex);
+            console.log(category[categ]);
+       }
+    }
+
+    localStorage.setItem('category',JSON.stringify(category));
+
+
+}
+
+function deleteOfArray(array,index)
+{
+    for(let i=index; i< array.length-1; i++)
+        array[i]=array[i+1]; 
+        
+    array.pop();
+
+    return array;
+}
 function getCategory(){
     const firstCategory = {todos:['primeira tarefa']}
     const category = JSON.parse(localStorage.getItem('category'));
